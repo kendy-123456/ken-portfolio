@@ -1,0 +1,58 @@
+/* Subtle technical grid background pattern */
+.bg-grid-pattern {
+    background-size: 40px 40px;
+    background-image:
+        linear-gradient(to right, rgba(56, 189, 248, 0.06) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(56, 189, 248, 0.06) 1px, transparent 1px);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0B1120;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #334155;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #475569;
+}
+
+/* Blinking cursor effect */
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+.cursor-blink {
+    animation: blink 1s step-end infinite;
+}
+
+/* Print styles for clean Blue & White Resume output */
+@media print {
+    body * {
+        visibility: hidden;
+    }
+
+    #printable-resume-sheet,
+    #printable-resume-sheet * {
+        visibility: visible;
+    }
+
+    #printable-resume-sheet {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        margin: 0;
+        padding: 20px;
+        box-shadow: none !important;
+        border: none !important;
+    }
+}
