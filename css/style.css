@@ -56,3 +56,77 @@
         border: none !important;
     }
 }
+/* Perfect CSS Halftone Effect */
+.halftone-overlay {
+    background-image: radial-gradient(circle, #000 1px, transparent 1px);
+    background-size: 4px 4px; /* Adjust size to make dots bigger/smaller */
+    mix-blend-mode: multiply;
+    opacity: 0.6;
+}
+
+
+/* =========================================
+   CYBER-HALFTONE PORTRAIT EFFECTS
+   ========================================= */
+
+.halftone-wrapper {
+    background-color: #0B1120;
+}
+
+/* The Portrait Base State */
+.halftone-portrait {
+    filter: grayscale(100%) contrast(140%) brightness(90%);
+}
+
+/* 1. CSS Halftone Dot Matrix Overlay */
+.halftone-overlay {
+    background-image: radial-gradient(circle, #0B1120 1px, transparent 1px);
+    background-size: 4px 4px; /* Adjust for dot size/spacing */
+    mix-blend-mode: multiply;
+    opacity: 0.85;
+    z-index: 10;
+}
+
+/* 2. Scanline Effect */
+.halftone-wrapper::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        transparent 50%,
+        rgba(11, 17, 32, 0.4) 50%
+    );
+    background-size: 100% 4px;
+    z-index: 15;
+    pointer-events: none;
+    opacity: 0.6;
+}
+
+/* 3. Radial Vignette (Blends edges into the card) */
+.halftone-vignette {
+    background: radial-gradient(
+        ellipse at center,
+        transparent 55%,
+        rgba(11, 17, 32, 0.25) 85%,
+        rgba(11, 17, 32, 0.6) 100%
+    );
+    z-index: 12;
+}
+
+/* 4. Hover Interactions (Reveal full color) */
+.group:hover .halftone-portrait {
+    filter: grayscale(0%) contrast(100%) brightness(100%);
+}
+
+.group:hover .halftone-overlay {
+    opacity: 0.1; /* Dots fade out to reveal image */
+}
+
+.group:hover .halftone-vignette {
+    opacity: 0.5; /* Vignette lightens up slightly */
+}vv
+
+
+
+
