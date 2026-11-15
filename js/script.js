@@ -10,6 +10,30 @@ document.addEventListener('DOMContentLoaded', () => {
         lucide.createIcons();
     }
 
+    // Nav scroll effect: deeper shadow after scrolling + highlight the current section's link
+    const header = document.querySelector('header');
+    const navLinks = Array.from(document.querySelectorAll('nav a[href^="#"]'));
+    const navSections = navLinks
+        .map(link => document.querySelector(link.getAttribute('href')))
+        .filter(Boolean);
+
+    const onScroll = () => {
+        if (header) {
+            header.style.boxShadow = window.scrollY > 10 ? '0 8px 24px rgba(0, 0, 0, 0.35)' : 'none';
+        }
+        let currentId = '';
+        navSections.forEach(section => {
+            if (section.getBoundingClientRect().top <= 120) currentId = section.id;
+        });
+        navLinks.forEach(link => {
+            const active = link.getAttribute('href') === '#' + currentId;
+            link.classList.toggle('text-sky-400', active);
+            link.classList.toggle('text-slate-300', !active);
+        });
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+
     // Mobile navigation toggle
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
