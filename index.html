@@ -12,15 +12,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <script src="js/tailwind-config.js"></script>
-<script src="https://cdn.tailwindcss.com"></script>
-
+   
 <link rel="stylesheet" href="css/style.css">
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body class="bg-[#0B1120] text-slate-200 font-sans antialiased selection:bg-sky-500/30 selection:text-sky-200 bg-grid-pattern">
-<script src="js/script.js"></script>
     <!-- 1. STICKY TOP NAVIGATION BAR -->
     <header class="sticky top-0 z-40 w-full backdrop-blur-md bg-[#0B1120]/90 border-b border-slate-800">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
@@ -70,10 +67,10 @@
     <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 
         <!-- 2. HERO & SUMMARY SECTION -->
-        <section id="summary" class="py-14 sm:py-20 border-b border-slate-800/80">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        <section id="summary" class="pt-4 sm:pt-6 pb-10 sm:pb-12 border-b border-slate-800/80">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
                 <!-- Left Column: Intro, Contact Bar & Summary -->
-                <div class="lg:col-span-7 space-y-6">
+                <div class="lg:col-span-7 space-y-5">
                     <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 font-mono text-xs">
                         <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
                         BSIT &mdash; NETWORK TECHNOLOGY SPECIALIZATION
@@ -101,9 +98,9 @@
                             <i data-lucide="copy" class="w-3 h-3 text-slate-500"></i>
                         </button>
 
-                        <button onclick="copyText('kendydeandes@gmai.com', 'Email address')" class="inline-flex items-center gap-2 px-3 py-2 rounded-lg bg-[#111827] hover:bg-[#1E293B] border border-slate-800 hover:border-sky-500/40 font-mono text-xs text-slate-200 transition-all cursor-pointer" title="Click to copy email address">
+                        <button onclick="copyText('kendydeandes@gmail.com', 'Email address')" class="inline-flex items-center gap-2 px-3 py-2 rounded-lg bg-[#111827] hover:bg-[#1E293B] border border-slate-800 hover:border-sky-500/40 font-mono text-xs text-slate-200 transition-all cursor-pointer" title="Click to copy email address">
                             <i data-lucide="mail" class="w-3.5 h-3.5 text-sky-400"></i>
-                            <span>kendydeandes@gmai.com</span>
+                            <span>kendydeandes@gmail.com</span>
                             <i data-lucide="copy" class="w-3 h-3 text-slate-500"></i>
                         </button>
 
@@ -136,25 +133,49 @@
                     </div>
                 </div>
 
-                <!-- Right Column: Interactive CLI / System Status Card -->
-                <div class="lg:col-span-5">
+                 <!-- Right Column: Cyber-Halftone Portrait & Interactive CLI Card -->
+                <div class="lg:col-span-5 flex flex-col gap-4">
+                    
+                    <!-- Profile Photo with Cyber-Halftone Effect -->
+                    <div class="group halftone-wrapper relative overflow-hidden rounded-2xl border border-slate-700/60 shadow-2xl w-fit max-w-full mx-auto hover:border-sky-500/40 transition-colors duration-500">
+                        <img src="img/ken.jpg" onerror="this.onerror=null;this.src='https://placehold.co/640x480/111827/38BDF8?text=RHOD+KENNEDY';" alt="Rhod Kennedy M. De Andres"
+                            class="halftone-portrait block w-auto h-auto max-w-full max-h-[300px] transition-all duration-700 ease-out group-hover:scale-[1.03]">
+
+                        <div class="absolute inset-0 bg-gradient-to-tr from-[#0B1120]/70 via-sky-500/10 to-emerald-400/10 mix-blend-color pointer-events-none transition-opacity duration-700 group-hover:opacity-20"></div>
+                        <div class="absolute inset-0 halftone-overlay pointer-events-none transition-opacity duration-700 group-hover:opacity-20"></div>
+                        <div class="absolute inset-0 halftone-vignette pointer-events-none transition-opacity duration-700"></div>
+
+                        <div class="absolute top-3 left-3 w-3.5 h-3.5 border-t-2 border-l-2 border-sky-400/80 z-20 transition-colors duration-500 group-hover:border-emerald-400"></div>
+                        <div class="absolute top-3 right-3 w-3.5 h-3.5 border-t-2 border-r-2 border-sky-400/80 z-20 transition-colors duration-500 group-hover:border-emerald-400"></div>
+                        <div class="absolute bottom-3 left-3 w-3.5 h-3.5 border-b-2 border-l-2 border-sky-400/80 z-20 transition-colors duration-500 group-hover:border-emerald-400"></div>
+                        <div class="absolute bottom-3 right-3 w-3.5 h-3.5 border-b-2 border-r-2 border-sky-400/80 z-20 transition-colors duration-500 group-hover:border-emerald-400"></div>
+
+                        <div class="absolute bottom-3.5 left-1/2 -translate-x-1/2 w-max z-20">
+                            <span class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#0B1120]/90 backdrop-blur-md border border-sky-500/40 text-sky-300 font-mono text-[10px] sm:text-[11px] tracking-wide shadow-lg">
+                                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                                SYS.OPERATOR // RHOD
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Interactive CLI / System Status Card -->
                     <div class="rounded-2xl bg-[#111827] border border-slate-800 shadow-2xl overflow-hidden">
                         <!-- Terminal Header -->
-                        <div class="px-4 py-3 bg-[#1E293B] border-b border-slate-800 flex items-center justify-between">
+                        <div class="px-4 py-2.5 bg-[#1E293B] border-b border-slate-800 flex items-center justify-between">
                             <div class="flex items-center gap-2">
-                                <span class="w-3 h-3 rounded-full bg-rose-500/80"></span>
-                                <span class="w-3 h-3 rounded-full bg-amber-500/80"></span>
-                                <span class="w-3 h-3 rounded-full bg-emerald-500/80"></span>
+                                <span class="w-2.5 h-2.5 rounded-full bg-rose-500/80"></span>
+                                <span class="w-2.5 h-2.5 rounded-full bg-amber-500/80"></span>
+                                <span class="w-2.5 h-2.5 rounded-full bg-emerald-500/80"></span>
                             </div>
                             <span class="font-mono text-xs text-slate-400">rhod_kennedy@net-lab ~ zsh</span>
                             <span class="font-mono text-[10px] px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">ONLINE</span>
                         </div>
                         <!-- Terminal Body -->
-                        <div class="p-5 font-mono text-xs sm:text-[13px] space-y-3 text-slate-300 leading-relaxed">
+                        <div class="p-4 sm:p-5 font-mono text-xs space-y-2.5 text-slate-300 leading-relaxed">
                             <div>
                                 <span class="text-emerald-400">rhod_kennedy@dlsud</span>:<span class="text-sky-400">~</span>$ profile --status
                             </div>
-                            <div class="rounded-xl bg-[#0B1120] border border-slate-800/90 p-3.5 space-y-2 text-xs">
+                            <div class="rounded-xl bg-[#0B1120] border border-slate-800/90 p-3 space-y-1.5 text-xs">
                                 <div class="flex justify-between gap-2 border-b border-slate-800/80 pb-1.5">
                                     <span class="text-slate-500">user:</span>
                                     <span class="text-white font-semibold">rhod_kennedy</span>
@@ -176,11 +197,11 @@
                                     <span class="text-emerald-400 font-semibold">780 / 990 (2026)</span>
                                 </div>
                             </div>
-                            <div class="pt-1 flex items-center justify-between">
+                            <div class="pt-0.5 flex items-center justify-between">
                                 <div>
                                     <span class="text-emerald-400">rhod_kennedy@dlsud</span>:<span class="text-sky-400">~</span>$ <span class="inline-block w-2 h-4 bg-sky-400 align-middle cursor-blink"></span>
                                 </div>
-                                <button onclick="runPingCheck()" id="ping-btn" class="px-2.5 py-1 rounded bg-slate-800 hover:bg-slate-700 border border-slate-700 text-[11px] text-sky-400 transition-colors">
+                                <button onclick="runPingCheck()" id="ping-btn" class="px-2.5 py-1 rounded-md bg-slate-800 hover:bg-slate-700 border border-slate-700 text-[11px] text-sky-400 transition-colors">
                                     Run Ping Check
                                 </button>
                             </div>
@@ -190,10 +211,9 @@
                 </div>
             </div>
         </section>
-
         <!-- 3. TECHNICAL SKILLS MATRIX (4-COLUMN CATEGORIZED GRID) -->
-        <section id="skills" class="py-16 sm:py-20 border-b border-slate-800/80">
-            <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-10 gap-4">
+        <section id="skills" class="py-10 sm:py-14 border-b border-slate-800/80">
+            <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-6 gap-4">
                 <div>
                     <p class="font-mono text-xs uppercase tracking-wider text-sky-400 mb-1">01 // TECHNICAL COMPETENCIES</p>
                     <h2 class="text-2xl sm:text-3xl font-bold text-white">Technical Skills Matrix</h2>
@@ -203,9 +223,9 @@
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-5">
                 <!-- Card 1: Networking & Cybersecurity -->
-                <div class="p-6 rounded-2xl bg-[#111827] border border-slate-800 hover:border-sky-500/50 transition-all flex flex-col justify-between">
+                <div class="lg:col-span-2 p-5 rounded-2xl bg-[#111827] border border-slate-800 hover:border-sky-500/50 transition-all flex flex-col justify-between">
                     <div>
                         <div class="w-10 h-10 rounded-xl bg-sky-500/10 border border-sky-500/20 flex items-center justify-center text-sky-400 mb-4">
                             <i data-lucide="shield-check" class="w-5 h-5"></i>
@@ -217,21 +237,20 @@
                             <span class="px-2.5 py-1 rounded-md bg-[#1E293B] border border-slate-700 font-mono text-xs text-slate-200">DHCP</span>
                             <span class="px-2.5 py-1 rounded-md bg-[#1E293B] border border-slate-700 font-mono text-xs text-slate-200">IPv4 Addressing</span>
                             <span class="px-2.5 py-1 rounded-md bg-[#1E293B] border border-slate-700 font-mono text-xs text-slate-200">Subnetting &amp; VLSM</span>
-                            <span class="px-2.5 py-1 rounded-md bg-[#1E293B] border border-slate-700 font-mono text-xs text-slate-200">DNS &amp; DHCP</span>
                             <span class="px-2.5 py-1 rounded-md bg-[#1E293B] border border-slate-700 font-mono text-xs text-slate-200">Basic Routing &amp; Switching</span>
                             <span class="px-2.5 py-1 rounded-md bg-[#1E293B] border border-slate-700 font-mono text-xs text-emerald-300">Network Security</span>
                             <span class="px-2.5 py-1 rounded-md bg-[#1E293B] border border-slate-700 font-mono text-xs text-slate-200">Vulnerability Scanning</span>
                             <span class="px-2.5 py-1 rounded-md bg-[#1E293B] border border-slate-700 font-mono text-xs text-slate-200">Network Troubleshooting</span>
                         </div>
                     </div>
-                    <div class="mt-6 pt-3 border-t border-slate-800 font-mono text-[11px] text-slate-400 flex items-center justify-between">
+                    <div class="mt-4 pt-3 border-t border-slate-800 font-mono text-[11px] text-slate-400 flex items-center justify-between">
                         <span>Infrastructure &amp; Sec</span>
                         <span class="text-sky-400">Core Track</span>
                     </div>
                 </div>
 
                 <!-- Card 2: Security & Network Tools -->
-                <div class="p-6 rounded-2xl bg-[#111827] border border-slate-800 hover:border-emerald-500/50 transition-all flex flex-col justify-between">
+                <div class="lg:col-span-2 p-5 rounded-2xl bg-[#111827] border border-slate-800 hover:border-emerald-500/50 transition-all flex flex-col justify-between">
                     <div>
                         <div class="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 mb-4">
                             <i data-lucide="radar" class="w-5 h-5"></i>
@@ -252,14 +271,14 @@
                             </div>
                         </div>
                     </div>
-                    <div class="mt-6 pt-3 border-t border-slate-800 font-mono text-[11px] text-slate-400 flex items-center justify-between">
+                    <div class="mt-4 pt-3 border-t border-slate-800 font-mono text-[11px] text-slate-400 flex items-center justify-between">
                         <span>Diagnostics &amp; Audit</span>
                         <span class="text-emerald-400">Hands-On</span>
                     </div>
                 </div>
 
                 <!-- Card 3: IoT & Device Configuration -->
-                <div class="p-6 rounded-2xl bg-[#111827] border border-slate-800 hover:border-emerald-500/50 transition-all flex flex-col justify-between">
+                <div class="lg:col-span-2 p-5 rounded-2xl bg-[#111827] border border-slate-800 hover:border-emerald-500/50 transition-all flex flex-col justify-between">
                     <div>
                         <div class="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 mb-4">
                             <i data-lucide="cpu" class="w-5 h-5"></i>
@@ -273,14 +292,14 @@
                             <span class="px-2.5 py-1 rounded-md bg-[#1E293B] border border-slate-700 font-mono text-xs text-slate-200">Device Connectivity Troubleshooting</span>
                         </div>
                     </div>
-                    <div class="mt-6 pt-3 border-t border-slate-800 font-mono text-[11px] text-slate-400 flex items-center justify-between">
+                    <div class="mt-4 pt-3 border-t border-slate-800 font-mono text-[11px] text-slate-400 flex items-center justify-between">
                         <span>Connected Devices</span>
                         <span class="text-emerald-400">Applied Skills</span>
                     </div>
                 </div>
 
                 <!-- Card 4: Programming & Scripting -->
-                <div class="p-6 rounded-2xl bg-[#111827] border border-slate-800 hover:border-sky-500/50 transition-all flex flex-col justify-between">
+                <div class="lg:col-span-3 p-5 rounded-2xl bg-[#111827] border border-slate-800 hover:border-sky-500/50 transition-all flex flex-col justify-between">
                     <div>
                         <div class="w-10 h-10 rounded-xl bg-sky-500/10 border border-sky-500/20 flex items-center justify-center text-sky-400 mb-4">
                             <i data-lucide="code-2" class="w-5 h-5"></i>
@@ -297,14 +316,14 @@
                             <span class="px-2.5 py-1 rounded-md bg-[#1E293B] border border-slate-700 font-mono text-xs text-emerald-300">Bash / PowerShell</span>
                         </div>
                     </div>
-                    <div class="mt-6 pt-3 border-t border-slate-800 font-mono text-[11px] text-slate-400 flex items-center justify-between">
+                    <div class="mt-4 pt-3 border-t border-slate-800 font-mono text-[11px] text-slate-400 flex items-center justify-between">
                         <span>Web, CLI &amp; Backend</span>
                         <span class="text-sky-400">Multi-Language</span>
                     </div>
                 </div>
 
                 <!-- Card 5: Data & Productivity Suite -->
-                <div class="p-6 rounded-2xl bg-[#111827] border border-slate-800 hover:border-emerald-500/50 transition-all flex flex-col justify-between">
+                <div class="sm:col-span-2 lg:col-span-3 p-5 rounded-2xl bg-[#111827] border border-slate-800 hover:border-emerald-500/50 transition-all flex flex-col justify-between">
                     <div>
                         <div class="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 mb-4">
                             <i data-lucide="bar-chart-3" class="w-5 h-5"></i>
@@ -329,7 +348,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="mt-6 pt-3 border-t border-slate-800 font-mono text-[11px] text-slate-400 flex items-center justify-between">
+                    <div class="mt-4 pt-3 border-t border-slate-800 font-mono text-[11px] text-slate-400 flex items-center justify-between">
                         <span>Microsoft Ecosystem</span>
                         <span class="text-emerald-400">Reporting</span>
                     </div>
@@ -338,8 +357,8 @@
         </section>
 
         <!-- 4. FEATURED LAB & TECHNICAL FOCUS AREAS (3 INTERACTIVE CARDS) -->
-        <section id="projects" class="py-16 sm:py-20 border-b border-slate-800/80">
-            <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-10 gap-4">
+        <section id="projects" class="py-10 sm:py-14 border-b border-slate-800/80">
+            <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-6 gap-4">
                 <div>
                     <p class="font-mono text-xs uppercase tracking-wider text-emerald-400 mb-1">02 // LABS &amp; TECHNICAL PRACTICE</p>
                     <h2 class="text-2xl sm:text-3xl font-bold text-white">Featured Lab &amp; Technical Focus Areas</h2>
@@ -394,7 +413,7 @@
                             </svg>
                         </div>
 
-                        <div class="p-6 space-y-3.5">
+                        <div class="p-5 space-y-3">
                             <div class="flex flex-wrap gap-1.5">
                                 <span class="px-2 py-0.5 rounded bg-sky-500/10 border border-sky-500/30 font-mono text-[11px] text-sky-400">Cisco Packet Tracer</span>
                                 <span class="px-2 py-0.5 rounded bg-[#1E293B] border border-slate-700 font-mono text-[11px] text-slate-300">Wireshark</span>
@@ -448,7 +467,7 @@
                             </div>
                         </div>
 
-                        <div class="p-6 space-y-3.5">
+                        <div class="p-5 space-y-3">
                             <div class="flex flex-wrap gap-1.5">
                                 <span class="px-2 py-0.5 rounded bg-emerald-500/10 border border-emerald-500/30 font-mono text-[11px] text-emerald-400">Nmap</span>
                                 <span class="px-2 py-0.5 rounded bg-[#1E293B] border border-slate-700 font-mono text-[11px] text-slate-300">Security+ Concepts</span>
@@ -495,7 +514,7 @@
                             </div>
                         </div>
 
-                        <div class="p-6 space-y-3.5">
+                        <div class="p-5 space-y-3">
                             <div class="flex flex-wrap gap-1.5">
                                 <span class="px-2 py-0.5 rounded bg-sky-500/10 border border-sky-500/30 font-mono text-[11px] text-sky-400">HTML/CSS/JS</span>
                                 <span class="px-2 py-0.5 rounded bg-[#1E293B] border border-slate-700 font-mono text-[11px] text-slate-300">C# / ASP.NET</span>
@@ -524,18 +543,18 @@
         </section>
 
         <!-- 5. PROFESSIONAL, CUSTOMER SERVICE & BUSINESS EXPERIENCE -->
-        <section id="experience" class="py-16 sm:py-20 border-b border-slate-800/80">
-            <div class="mb-10">
+        <section id="experience" class="py-10 sm:py-14 border-b border-slate-800/80">
+            <div class="mb-6">
                 <p class="font-mono text-xs uppercase tracking-wider text-emerald-400 mb-1">03 // PROFESSIONAL &amp; BUSINESS EXPERIENCE</p>
                 <h2 class="text-2xl sm:text-3xl font-bold text-white">Customer Service, Retail &amp; People Skills</h2>
             </div>
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                <div class="p-6 rounded-2xl bg-[#111827] border border-slate-800">
+                <div class="p-5 rounded-2xl bg-[#111827] border border-slate-800">
                     <div class="flex items-center gap-3 mb-4">
                         <div class="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400"><i data-lucide="store" class="w-5 h-5"></i></div>
                         <div>
                             <h3 class="text-lg font-semibold text-white">Retail Sales &amp; Store Operations</h3>
-                            <p class="text-xs font-mono text-slate-400">Busines Experience</p>
+                            <p class="text-xs font-mono text-slate-400">Business Experience</p>
                         </div>
                     </div>
                     <ul class="text-sm text-slate-300 space-y-2 leading-relaxed list-disc list-inside">
@@ -545,7 +564,7 @@
                         <li>Developed practical skills in customer relations, sales communication, and service.</li>
                     </ul>
                 </div>
-                <div class="p-6 rounded-2xl bg-[#111827] border border-slate-800">
+                <div class="p-5 rounded-2xl bg-[#111827] border border-slate-800">
                     <div class="flex items-center gap-3 mb-4">
                         <div class="w-10 h-10 rounded-xl bg-sky-500/10 border border-sky-500/20 flex items-center justify-center text-sky-400"><i data-lucide="users" class="w-5 h-5"></i></div>
                         <div>
@@ -564,13 +583,13 @@
         </section>
 
         <!-- 6. EDUCATION, CERTIFICATIONS & ADDITIONAL HIGHLIGHTS (SPLIT 2-COLUMN) -->
-        <section id="education" class="py-16 sm:py-20">
-            <div class="mb-10">
+        <section id="education" class="py-10 sm:py-14">
+            <div class="mb-6">
                 <p class="font-mono text-xs uppercase tracking-wider text-sky-400 mb-1">04 // CREDENTIALS &amp; BACKGROUND</p>
                 <h2 class="text-2xl sm:text-3xl font-bold text-white">Education, Trainings &amp; Highlights</h2>
             </div>
 
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 <!-- Left Column: Education -->
                 <div class="space-y-6">
                     <h3 class="font-mono text-sm uppercase tracking-wider text-slate-400 flex items-center gap-2 border-b border-slate-800 pb-3">
@@ -578,7 +597,7 @@
                         Academic Education
                     </h3>
 
-                    <div class="relative pl-6 border-l-2 border-slate-800 space-y-8">
+                    <div class="relative pl-6 border-l-2 border-slate-800 space-y-5">
                         <!-- College -->
                         <div class="relative p-5 rounded-2xl bg-[#111827] border border-slate-800">
                             <span class="absolute -left-[31px] top-6 w-3.5 h-3.5 rounded-full bg-sky-400 ring-4 ring-[#0B1120]"></span>
@@ -689,8 +708,8 @@
     </main>
 
     <!-- 6. FOOTER & CONTACT BAR -->
-    <footer class="border-t border-slate-800 bg-[#080D19] mt-8">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <footer class="border-t border-slate-800 bg-[#080D19]">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
             <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
                 <div class="space-y-2">
                     <div class="font-mono font-bold text-white text-base sm:text-lg">
@@ -707,9 +726,9 @@
                         <i data-lucide="phone" class="w-3.5 h-3.5 text-emerald-400"></i>
                         09368939141
                     </button>
-                    <button onclick="copyText('kendydeandes@gmai.com', 'Email address')" class="inline-flex items-center gap-2 px-3.5 py-2.5 rounded-xl bg-[#111827] hover:bg-[#1E293B] border border-slate-800 font-mono text-xs text-slate-200 transition-all cursor-pointer">
+                    <button onclick="copyText('kendydeandes@gmail.com', 'Email address')" class="inline-flex items-center gap-2 px-3.5 py-2.5 rounded-xl bg-[#111827] hover:bg-[#1E293B] border border-slate-800 font-mono text-xs text-slate-200 transition-all cursor-pointer">
                         <i data-lucide="mail" class="w-3.5 h-3.5 text-sky-400"></i>
-                        kendydeandes@gmai.com
+                        kendydeandes@gmail.com
                     </button>
                     <a href="https://www.instagram.com/ken_shuai/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-3.5 py-2.5 rounded-xl bg-[#111827] hover:bg-[#1E293B] border border-slate-800 hover:border-pink-500/40 font-mono text-xs text-slate-200 transition-all">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5 text-pink-400" aria-hidden="true">
@@ -727,7 +746,7 @@
                 </div>
             </div>
 
-            <div class="mt-8 pt-6 border-t border-slate-800/80 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+            <div class="mt-6 pt-5 border-t border-slate-800/80 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
                 <p>&copy; 2026 Rhod Kennedy M. De Andres. All rights reserved.</p>
                 <div class="flex items-center gap-5 font-mono">
                     <a href="#summary" class="hover:text-sky-400 transition-colors">SUMMARY</a>
@@ -781,7 +800,7 @@
                         <div class="text-xs text-slate-600 sm:text-right space-y-1 shrink-0">
                             <p><strong class="text-slate-800">Address:</strong> 151 Lalaan 1st, Silang, Cavite, Philippines</p>
                             <p><strong class="text-slate-800">Phone:</strong> 09368939141</p>
-                            <p><strong class="text-slate-800">Email:</strong> kendydeandes@gmai.com</p>
+                            <p><strong class="text-slate-800">Email:</strong> kendydeandes@gmail.com</p>
                             <p><strong class="text-slate-800">Instagram:</strong> instagram.com/ken_shuai</p>
                         </div>
                     </div>
@@ -894,4 +913,4 @@
     </div>
     <script src="js/script.js" defer></script>
 </body>
-</html>
+</html>s
